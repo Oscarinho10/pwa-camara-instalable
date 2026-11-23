@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="apple-touch-icon" href="./icons/icon-192.png">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="manifest" href="./manifest.json">
+    <title>Inspección Visual PWA</title>
+</head>
+<body>
+    <main class="app">
+        <header class="app__header">
+            <h1>Oscar Giovanni Pedraza López</h1>
+            <p class="app__subtitle">Captura de evidencia fotográfica con acceso consciente a cámara.</p>
+        </header>
+
+        <p id="mensaje-estado" class="estado" role="status">Cámara apagada.</p>
+
+        <div class="visor">
+            <video id="visor-camara" autoplay playsinline muted></video>
+        </div>
+
+        <section id="aviso-permiso" class="aviso" hidden>
+            <h2 class="aviso__titulo">Permiso de cámara</h2>
+            <p class="aviso__texto">
+                Esta aplicación requiere acceso a tu cámara únicamente para mostrar una vista
+                previa local en pantalla. Ninguna imagen se envía a servidores externos.
+            </p>
+            <button id="btn-confirmar-permiso" type="button" class="boton boton--primario">
+                Aceptar y encender cámara
+            </button>
+        </section>
+
+        <section id="instrucciones-ios" class="aviso" hidden>
+            <h2 class="aviso__titulo">Instalar en iPhone</h2>
+            <p class="aviso__texto">
+                Para instalar en iPhone, pulsa el icono Compartir y selecciona "Agregar a inicio".
+            </p>
+        </section>
+
+        <div class="acciones">
+            <button id="btn-preparar-camara" type="button" class="boton boton--primario">
+                Solicitar acceso a cámara
+            </button>
+            <button id="btn-alternar-camara" type="button" class="boton">
+                Cambiar de cámara
+            </button>
+            <button id="btn-apagar-camara" type="button" class="boton boton--peligro">
+                Apagar cámara
+            </button>
+            <button id="btn-instalar" type="button" class="boton boton--instalar" hidden>
+                Instalar App
+            </button>
+        </div>
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+</html>
